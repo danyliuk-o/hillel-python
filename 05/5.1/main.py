@@ -1,7 +1,7 @@
 import keyword
 import string
 
-name = input("Введіть ім'я змінної: ")
+name = input("Enter a variable name: ")
 
 is_valid = True
 
