@@ -1,19 +1,9 @@
-import string
+import math
 
-text = input("Enter a string: ")
+input_number = int(input("Enter a number: "))
 
-words = text.split()
-print(words)
-cleaned_words = []
-for word in words:
-    cleaned = "".join(char for char in word if char not in string.punctuation)
-    if cleaned:
-        cleaned_words.append(cleaned[0].upper() + cleaned[1:])
+result = input_number
+while result > 9:
+    result = math.prod(int(digit) for digit in str(result))
 
-if cleaned_words:
-    hashtag = "#" + "".join(cleaned_words)
-    hashtag = hashtag[:140]
-else:
-    hashtag = ""
-
-print(hashtag)
+print(result)
